@@ -1,21 +1,4 @@
-FROM node:12.18.1
-
-ENV NODE_ENV=production
-
-WORKDIR /app
-
-COPY ["package.json", "package-lock.json*", "./"]
-
-RUN npm install --production
-
-COPY . .
-
-#RUN npm run build
-
-
-#WORKDIR .
-
-CMD [ "npm", "start" ]
-
-#ENTRYPOINT [ "serve -s build"]
-
+FROM openjdk:8-jdk-alpine
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
