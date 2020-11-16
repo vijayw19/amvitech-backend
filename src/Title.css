@@ -1,0 +1,17 @@
+.Title {
+  /*background-image: url(./images/my_image.png);*/
+  box-sizing: border-box;
+  width: 40%;
+  display: flex;
+  justify-content: left;
+  padding: 18em;
+  margin-bottom: 10em;
+
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
