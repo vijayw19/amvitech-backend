@@ -29,4 +29,4 @@ jobs:
         app-name: 'amvitech-backend'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_615f924185e84717b4021292a38fd2e6 }}
-        package: '${{ github.workspace }}/target/*.war'
+        package: '${{ github.workspace }}/target/*.jar'
